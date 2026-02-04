@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leht’s Travel | Joiner Tours</title>
+    <style>
+        :root {
+            --primary: #0077b6;
+            --accent: #00b4d8;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #e9ecef;
+            color: var(--dark);
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .tour-section {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .tour-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .tour-header:hover {
+            background: var(--accent);
+        }
+
+        .tour-content {
+            display: none;
+            padding: 25px;
+            border-top: 2px solid #eee;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #ffea00;
+            color: #333;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .price-tag {
+            font-size: 1.5em;
+            color: #d00000;
+            font-weight: bold;
+        }
+
+        .grid-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .cta-button {
+            display: block;
+            text-align: center;
+            background: #25d366;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        hr { border: 0; border-top: 1px solid #ddd; margin: 20px 0; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Leht’s Travel</h1>
+        <p>Your ultimate Joiner Tour partner anywhere in the Philippines 🇵🇭</p>
+    </header>
+
+    <div class="tour-section">
+        <div class="tour-header" onclick="toggleTour('balabac')">
+            <span>🏝️ Balabac Island (Holy Week Escape)</span>
+            <span>₱14,500 | 4D3N ▾</span>
+        </div>
+        <div id="balabac" class="tour-content">
+            <span class="badge">PROMO RATE</span>
+            <div class="price-tag">₱14,500 per pax</div>
+            <p><strong>Date:</strong> April 2–5, 2026 (Flight: April 1)</p>
+            <p>Discover Onuk Island, one of Palawan’s best-kept secrets — where turquoise waters, white sand, and peaceful island vibes await. 🌊💙</p>
+            
+            <hr>
+            <h3>Inclusions</h3>
+            <ul class="grid-list">
+                <li>✔️ 2 Days Island Tour</li>
+                <li>✔️ Onuk Island Stay</li>
+                <li>✔️ Full Board Meals</li>
+                <li>✔️ RT Van Transfer</li>
+                <li>✔️ Licensed Boat</li>
+                <li>✔️ Eco Fees (ETDF)</li>
+            </ul>
+
+            <h3>Exclusions</h3>
+            <ul>
+                <li>❌ Airfare & Hotel in PPS</li>
+                <li>❌ Snorkel/Kayak Gear</li>
+                <li>❌ Onuk Private Tent (₱500)</li>
+            </ul>
+            <a href="#" class="cta-button">📩 DM TO SECURE SLOT</a>
+        </div>
+    </div>
+
+    <div class="tour-section">
+        <div class="tour-header" onclick="toggleTour('northern')">
+            <span>🌟 Northern Mindanao Adventure</span>
+            <span>₱12,499 | 5D4N ▾</span>
+        </div>
+        <div id="northern" class="tour-content">
+            <div class="price-tag">₱12,499 per pax</div>
+            <p><strong>Dates:</strong> Oct 29–Nov 2 | Dec 5–9, 2026</p>
+            <p>Looking for joiners! Solo, couple, barkada—everyone is welcome! 🌈</p>
+            
+            <hr>
+            <strong>Destinations:</strong>
+            <p>Marawi, Camiguin (White Island/Sunken Cemetery), Bukidnon (Communal Ranch/Dahilayan), Misamis Oriental.</p>
+            
+            <h3>Package Inclusions:</h3>
+            <ul class="grid-list">
+                <li>✔️ Airport Transfers</li>
+                <li>✔️ Roro & Boat Fees</li>
+                <li>✔️ Accommodation</li>
+                <li>✔️ Entrance & Fuel</li>
+            </ul>
+            <p><strong>Reservation Fee:</strong> ₱3,000</p>
+            <a href="#" class="cta-button">📩 RESERVE YOUR SLOT</a>
+        </div>
+    </div>
+
+    <div class="tour-section">
+        <div class="tour-header" onclick="toggleTour('western')">
+            <span>🌊 Western Mindanao Open Tour</span>
+            <span>5 Days | 4 Nights ▾</span>
+        </div>
+        <div id="western" class="tour-content">
+            <span class="badge">ROADTRIP 2026</span>
+            <p><strong>Date:</strong> June 11–15, 2026</p>
+            <p><strong>Route:</strong> Arrival Zamboanga (ZAM) | Exit Dipolog (DPL)</p>
+            
+            <hr>
+            <h3>Highlights</h3>
+            <ul class="grid-list">
+                <li>📍 Masjid Rainbow</li>
+                <li>📍 Merloquet Falls</li>
+                <li>📍 Inclined Trike Ride</li>
+                <li>📍 Gloria's Fantasyland</li>
+                <li>📍 Dakak Beach</li>
+                <li>📍 Rizal Shrine</li>
+            </ul>
+
+            <h3>Inclusions</h3>
+            <ul>
+                <li>✔️ Van Transfer (RT)</li>
+                <li>✔️ Accommodation (Sharing)</li>
+                <li>✔️ Gas, Fuel, & Boat Rental</li>
+            </ul>
+            <a href="#" class="cta-button">📩 PM NOW TO JOIN</a>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleTour(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
